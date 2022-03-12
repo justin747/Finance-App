@@ -16,23 +16,18 @@ struct CustomDatePicker: View {
     var body: some View {
         
         VStack(spacing: 35){
-            
-            // Days...
-            let days: [String] = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-            
+        
             HStack(spacing: 20){
                 
                 VStack(alignment: .leading, spacing: 10) {
                     
-                    Text(extraDate()[0])
+                    Text(extraDate()[0] + " " + extraDate()[1])
                         .font(.caption)
                         .fontWeight(.semibold)
                     
-                    Text(extraDate()[1])
+                    Text()
                         .font(.title.bold())
                 }
-                
-                Spacer(minLength: 0)
                 
                 Button {
                     withAnimation{
