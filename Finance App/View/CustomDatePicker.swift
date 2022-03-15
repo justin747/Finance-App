@@ -48,7 +48,7 @@ struct CustomDatePicker: View {
             // Day View...
             
             HStack(spacing: 0){
-//                ForEach(days,id: \.self){day in
+                ForEach(days,id: \.self){day in
                     
                     Text(day)
                         .font(.callout)
