@@ -90,34 +90,7 @@ struct CustomDatePicker: View {
     func CardView(value: DateValue)->some View{
         
         VStack{
-            
-            if value.day != -1{
-                
-                if let task = tasks.first(where: { task in
-                    
-                    return isSameDay(date1: task.taskDate, date2: value.date)
-                }){
-                    Text("\(value.day)")
-                        .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
-                        .frame(maxWidth: .infinity)
-                    
-                    Spacer()
-                    
-                    Circle()
-                        .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : Color("Pink"))
-                        .frame(width: 8,height: 8)
-                }
-                else{
-                    
-                    Text("\(value.day)")
-                        .font(.title3.bold())
-                        .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
-                        .frame(maxWidth: .infinity)
-                    
-                    Spacer()
-                }
-            }
+           
         }
         .padding(.vertical,9)
         .frame(height: 60,alignment: .top)
