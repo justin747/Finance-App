@@ -16,7 +16,7 @@ struct CustomDatePicker: View {
     var body: some View {
         
         VStack(spacing: 35){
-        
+            
             HStack(spacing: 20){
                 
                 Button {
@@ -31,7 +31,7 @@ struct CustomDatePicker: View {
                 Text(extraDate()[0] + " " + extraDate()[1])
                     .font(.callout)
                     .fontWeight(.semibold)
-
+                
                 Button {
                     
                     withAnimation{
@@ -67,7 +67,7 @@ struct CustomDatePicker: View {
                     
                     CardView(value: value)
                         .background(
-                        
+                            
                             Capsule()
                                 .fill(Color("Pink"))
                                 .padding(.horizontal,8)
@@ -87,13 +87,16 @@ struct CustomDatePicker: View {
     }
     
     @ViewBuilder
-    func CardView(value: DateValue)->some View{
+    func CardView(value: DateValue) -> some View {
         
         VStack{
-           
+            
+            Text("\(value.day)")
+                .font(.title3.bold())
+                .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
+                .frame(maxWidth: .infinity)
+            
         }
-        .padding(.vertical,9)
-        .frame(height: 60,alignment: .top)
     }
     
     // checking dates...
@@ -121,7 +124,7 @@ struct CustomDatePicker: View {
         guard let currentMonth = calendar.date(byAdding: .month, value: self.currentMonth, to: Date()) else{
             return Date()
         }
-                
+        
         return currentMonth
     }
     
