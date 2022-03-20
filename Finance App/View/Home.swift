@@ -29,7 +29,7 @@ struct Home: View {
                 //MARK: Home View
                 
                 VStack(spacing: 0) {
-                    
+                    CustomDatePicker(currentDate: <#T##Binding<Date>#>, currentMonth: <#T##Int#>)
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
                         .fill(Color("Purple"))
                         .matchedGeometryEffect(id: "DATEVIEW", in: animation)
