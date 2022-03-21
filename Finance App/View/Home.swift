@@ -15,6 +15,8 @@ struct Home: View {
     //MARK: Hero Effect
     @Namespace var animation
     
+    @State var currentDate: Date = Date()
+    
     var body: some View {
         ZStack{
             
