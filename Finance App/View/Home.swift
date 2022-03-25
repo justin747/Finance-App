@@ -32,10 +32,6 @@ struct Home: View {
                 
                 VStack(spacing: 0) {
                     CustomDatePicker(currentDate: $currentDate)
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .fill(Color("Purple"))
-                        .matchedGeometryEffect(id: "DATEVIEW", in: animation)
-                        .frame(height: 290)
                 }
                 .padding([.horizontal, .top])
             }
