@@ -32,6 +32,9 @@ struct Home: View {
                 
                 VStack(spacing: 0) {
                     CustomDatePicker(currentDate: $currentDate)
+                        .background {
+                            
+                        }
                 }
                 .padding([.horizontal, .top])
             }
