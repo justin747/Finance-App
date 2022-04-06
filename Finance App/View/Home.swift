@@ -22,7 +22,7 @@ struct Home: View {
             
             if !animatedStates[1] {
             RoundedRectangle(cornerRadius: animatedStates[0] ? 30 : 0, style: .continuous)
-                .fill(Color("Orange"))
+                .fill(Color("Yellow"))
                 .matchedGeometryEffect(id: "DATEVIEW", in: animation)
                 .ignoresSafeArea()
             }
